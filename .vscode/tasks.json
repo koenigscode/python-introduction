@@ -6,7 +6,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "pdflatex -synctex=1 -interaction=nonstopmode --shell-escape main.tex",
+      "command": "pdflatex -synctex=1 -interaction=nonstopmode --shell-escape main.tex && pdflatex -synctex=1 -interaction=nonstopmode --shell-escape main.tex",
       "problemMatcher": []
     }
   ]

@@ -6,47 +6,45 @@
 \usepackage[left=3cm, right=3cm]{geometry}
 \usepackage[stable]{footmisc}
 \usepackage[parfill]{parskip} % empty line instead of indent
-\usepackage[most]{tcolorbox}
 \usepackage{minted}
 
 \pagestyle{empty}
 
 \fancypagestyle{firstpage}{
-    \fancyfoot{}
-    \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
 }
 
 \fancypagestyle{content} {
-\lhead{Michael König}
-\rhead{\thepage}
-\fancyfoot{}
+  \lhead{Michael König}
+  \rhead{\thepage}
+  \fancyfoot{}
 }
 
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
 \renewcommand\maketitlehookd{\vfill\null}
 \renewcommand{\abstractname}{Introduction}
 
-\title {Python}
-\author {Michael König}
-\date{}
+\title{Python}
+\author{Michael König}
+\date{\today}
 
 \begin{document}
-\begin{titlingpage}
-  \maketitle
-  \thispagestyle{firstpage}
-  
-  \begin{abstract}
-  \noindent
-  % TODO:
-  \end{abstract}
+  \begin{titlingpage}
+    \maketitle
+    \thispagestyle{firstpage}
+    
+    \begin{abstract}
+      \noindent
+      %TODO:
+    \end{abstract}
   \end{titlingpage}
 
+  \tableofcontents
+  \newpage
+  \pagestyle{content}
+  \setcounter{page}{1}
 
-\newpage
-\tableofcontents
-\newpage
-\pagestyle{content}
-\setcounter{page}{1}
-
-% \inputminted{python}{main.py}
+  \input{"./content/content.tex"}
+  % \inputminted{python}{main.py}
 \end{document}
