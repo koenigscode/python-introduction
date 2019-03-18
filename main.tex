@@ -6,7 +6,7 @@
 \usepackage[left=3cm, right=3cm]{geometry}
 \usepackage[stable]{footmisc}
 \usepackage[parfill]{parskip} % empty line instead of indent
-\usepackage{minted}
+\usepackage[section]{minted}
 
 \pagestyle{empty}
 
@@ -19,6 +19,28 @@
   \lhead{Michael König}
   \rhead{\thepage}
   \fancyfoot{}
+}
+
+\newmintedfile[mypy]{python}{
+fontfamily=tt,
+linenos=true,
+numberblanklines=true,
+numbersep=5pt,
+gobble=0,
+frame=single,
+framerule=0.4pt,
+framesep=2mm,
+funcnamehighlighting=true,
+tabsize=2,
+obeytabs=false,
+mathescape=false
+showspaces=false,
+showtabs =false,
+texcl=false,
+}
+
+\newmintedfile[mytext]{text}{
+fontsize=\small
 }
 
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
