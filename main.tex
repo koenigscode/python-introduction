@@ -2,11 +2,14 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{helvet}
 \usepackage{multirow, hyphenat, blindtext, hyperref, framed, textcomp, xcolor, fancyhdr, titling}
 \usepackage[left=3cm, right=3cm]{geometry}
 \usepackage[stable]{footmisc}
 \usepackage[parfill]{parskip} % empty line instead of indent
 \usepackage[section]{minted}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{empty}
 
@@ -22,7 +25,8 @@
 }
 
 \hypersetup{
-    colorlinks=true,    
+    colorlinks=true, 
+    linkcolor=,
     urlcolor=blue,
 }
 
