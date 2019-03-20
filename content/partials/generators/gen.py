@@ -1,5 +1,5 @@
 def gen():
-  for x in range(10*10000):
+  for x in range(10**10000):
     yield x**2
 
 g = gen()
