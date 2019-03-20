@@ -1,1 +1,38 @@
 \section{Imports}
+
+  Once you've installed a module (or it's part of the standard library) you can
+  easily import it using the import statement.
+
+  Let's consider numpy as an example:\\
+  \mintinline{python}{import numpy} enables you to access numpy's objects and modules, 
+  for instance the \textit{ones} method (which gives you an array filled with zeros)
+  by calling \mintinline{python}{numpy.ones((2,2))}.
+
+  Most of the time, however, you'll see people use \textit{np} as an alias for numpy.
+  Just type \mintinline{python}{import numpy as np} and you're able to call the
+  \textit{ones} method with \mintinline{python}{np.ones((2,2))}
+
+  If you just need some specific objects or methods, like the \textit{zeros} or \textit{ones} method,
+  you can import them by using \mintinline{python}{from numpy import zeros, ones}.
+  You can then access the methods by simply saying
+  \mintinline{python}{ones((2,2))} and there's no need for the 'numpy' at front.
+
+  Newcomers often tend to use \mintinline{python}{from numpy import *} which
+  enables you to use any method or object from the module without prefixing
+  it with the module name at front or importing it explicitly by using its name.\\
+  However, you should \textbf{never use a \mintinline{python}{from x import *}}
+  as it pollutes your namespace, meaning you've got a problem if
+  two or more modules have members with the same name.
+
+  Consider the following example:
+  \mypy{content/partials/imports/import_star.py}
+  \mytext{content/partials/imports/import_star.out}
+
+  In both modules a variable \textit{some\_var} was declared and set to different values.
+  As you can see in the output, some\_var from b overwrote some\_var from a.
+  To avoid these kind of issues, just import modules under a short alias, like
+  np for numpy, pd for pandas or tk for tkinter.
+
+  All the methods introduced above also work for submodules, so to use the \textit{pyplot} submodule
+  from \textit{matplotlib} as \textit{plt} you can import it using
+  \mintinline{python}{import matplotlib.pylot as plt}.
