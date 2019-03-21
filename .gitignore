@@ -1,6 +1,6 @@
 __latexindent_temp.tex
 __pycache__
-_minted-main
+_minted*
 *.aux
 *.fdb_latexmk
 *.fls

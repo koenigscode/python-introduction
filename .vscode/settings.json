@@ -1,0 +1,27 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex shell-escape",
+      "tools": ["pdflatex shell-escape", "pdflatex shell-escape"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex shell-escape",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "--shell-escape",
+        "--jobname=python-introduction",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"],
+      "env": {}
+    }
+  ]
+}
