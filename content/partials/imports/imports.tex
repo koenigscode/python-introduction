@@ -5,7 +5,7 @@
 
   Let's consider numpy as an example:\\
   \mintinline{python}{import numpy} enables you to access numpy's objects and modules, 
-  for instance the \textit{ones} method (which gives you an array filled with zeros)
+  for instance, the \textit{ones} method (which gives you an array filled with zeros)
   by calling \mintinline{python}{numpy.ones((2,2))}.
 
   \subsection{Alias}
@@ -23,7 +23,7 @@
 
     Newcomers often tend to use \mintinline{python}{from numpy import *} which
     enables you to use any method or object from the module without prefixing
-    it with the module name at front or importing it explicitly by using its name.\\
+    it with the module name at the front or importing it explicitly by using its name.\\
     However, you should \textbf{never use a \mintinline{python}{from x import *}}
     as it pollutes your namespace, meaning you've got a problem if
     two or more modules have members with the same name.
@@ -32,7 +32,7 @@
     \mypy{content/partials/imports/import_star.py}
     \mytext{content/partials/imports/import_star.out}
 
-    In both modules a variable \textit{some\_var} was declared and set to different values.
+    In both modules, a variable \textit{some\_var} was declared and set to different values.
     As you can see in the output, some\_var from b overwrote some\_var from a.
     To avoid these kind of issues, just import modules under a short alias, like
     np for numpy, pd for pandas or tk for tkinter.
