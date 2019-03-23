@@ -13,7 +13,6 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "--shell-escape",
-        "--jobname=python-introduction",
         "%DOCFILE%"
       ]
     },
