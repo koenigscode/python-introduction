@@ -5,6 +5,31 @@
     \subsubsection{List Slicing}
 
   \subsection{Set}
+    A set is an unordered list with no duplicate items.
+
+    \begin{itemize}
+      \bitem{Creation:} \mintinline{python}{s = set()} \sep{,}
+      \mintinline{python}{s = set(iterable)} \\
+      You \textbf{cannot} create a set using two empty curly braces \textit{\{ \}} as this would
+      create an empty dictionary.
+
+      \bitem{Add Item:} \mintinline{python}{s.add(item)} \\
+      If the element is already in the list, it won't be added again.
+
+      \bitem{Update (Extend) Set:} \mintinline{python}{s.update(iterable)} \\
+      Adds all elements from \textit{iterable} to the set.
+
+      \bitem{Remove Items:} \mintinline{python}{s.remove(item)} \\
+      Removes the item if it is present, otherwise raises KeyError.
+
+      \bitem{Discard Item:} \mintinline{python}{s.discard(item)} \\
+      Removes the element if it is present, otherwise does nothing.
+
+      \bitem{Clear Set:} \mintinline{python}{s.clear()}
+
+      \bitem{Membership Testing:} \mintinline{python}{item in s} \sep{,}
+      \mintinline{python}{item not in s}
+    \end{itemize}
 
   \subsection{Dictionary}
 
