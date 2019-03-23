@@ -48,7 +48,19 @@
     it is later accessed by just using \mintinline{python}{args}, not \mintinline{python}{*args}!
   
   \subsection{Keyword Arguments}
+    Arbitrary argument lists contain a list of spare values, keyword arguments, on the other hand,
+    are dictionaries containing spare values set in the function call with the
+    \mintinline{python}{key=value} syntax.
 
+    \mypy{content/partials/functions/kwargs.py}
+    \mytext{content/partials/functions/kwargs.out}
+
+    Note that \textit{item} is not a keyword argument, as \textit{item} is a normal variable
+    from the function definition, however, its value can still be set using the
+    \mintinline{python}{key=value} syntax in the1 function call.
+    
+
+  
   \subsection{Lambdas}
     Lambdas are a shorthand for one-line functions and created using the
     \mintinline{python}{lambda} keyword. They receive variables and their function body consists
