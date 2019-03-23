@@ -23,5 +23,6 @@
       "args": ["%DOCFILE%"],
       "env": {}
     }
-  ]
+  ],
+  "editor.formatOnSave": false
 }

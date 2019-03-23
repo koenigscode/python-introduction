@@ -34,7 +34,7 @@
   \subsection{Arbitrary Argument Lists}
 
     Sometimes you want to be able to call a function with any number of variables;
-    in Python this is done with *args and you might know this concept from other programming
+    in Python, this is done with *args and you might know this concept from other programming
     languages as 'varargs' (variables arguments).
 
     Let's take a function \mintinline{python}{my_sum()} as an example:
@@ -50,5 +50,12 @@
   \subsection{Keyword Arguments}
 
   \subsection{Lambdas}
+    Lambdas are a shorthand for one-line functions and created using the
+    \mintinline{python}{lambda} keyword. They receive variables and their function body consists
+    of only one term, which value also gets returned, therefore an explicit
+    \mintinline{python}{return} is not needed.
+
+    \mypy{content/partials/functions/lambda.py}
+    \mytext{content/partials/functions/lambda.out}
 
   \subsection{Tuple Unpacking}
