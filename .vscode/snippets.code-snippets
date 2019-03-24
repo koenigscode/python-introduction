@@ -9,14 +9,14 @@
   "Insert Python and Out file": {
     "prefix": "ipo",
     "body": [
-      "\\mypy{content/partials/basic_syntax/raise_error.py}",
-      "\\mytext{content/partials/basic_syntax/raise_error.out}"
+      "\\mypy{content/partials/${1:basic_syntax}/${2:raise_error}.py}",
+      "\\mytext{content/partials/${1:basic_syntax}/${2:raise_error}.out}"
     ]
   },
-  "Insert mintinline for Python": {
-    "prefix": "imp",
+  "Insert mintinline": {
+    "prefix": "imi",
     "body": [
-      "\\mintinline{Python}{}"
+      "\\mintinline{${1:Python}}{${2}}"
     ]
   }
 }
