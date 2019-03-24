@@ -101,6 +101,72 @@
     \end{itemize}
 
   \subsection{Dictionary}
+    A dictionary \textit{(map, associative array)} is a mapping of key-value pairs.
+    
+    \begin{itemize}
+        \bitem{Creation:} \mintinline{Python}{d = {}} \sep{,} \mintinline{Python}{d = {key: val}} \\
+        \mintinline{Python}{d = dict()} \sep{,} \mintinline{Python}{d = dict(iterable)} \\
+        You can create a dictionary from an iterable containing indexable items (e.g. lists)
+        with a length of 2:
+
+        \mypy{content/partials/collections/dictionary_example.py}
+        \mytext{content/partials/collections/dictionary_example.out}
+
+        \bitem{Add Key-Value Pair:} \mintinline{Python}{d[key] = val}
+
+        \bitem{Update (Extend) Set:} \mintinline{python}{d.update(dictionary)} \sep{,}
+        \mintinline{python}{d.update(iterable)} \\
+        Adds all key-value pairs from the given\textit{dictionary} to the dictionary \textit{d}.\\
+        You can also extend the dictionary with an iterable containing indexable items (e.g. lists)
+        like when creating a new dictionary (see Dictionary Creation)
+
+        \bitem{Access Value:}
+        \begin{itemize}
+            \bitem{d[key]:} \mintinline{Python}{val = d[key]} \\
+            Raises a KeyError if the dictionary does not contain the key.
+            \bitem{Get Method:} \mintinline{Python}{val = d.get(key)} \sep{,}
+            \mintinline{Python}{val = d.get(key, default=<default value>)} \\
+            Returns the default value if the dictionary does not contain the key.
+            The default value's default value is None.
+        \end{itemize}
+
+        \bitem{Remove Item:} 
+        \begin{itemize}
+            \bitem{Pop:} \mintinline{Python}{d.pop(key)}
+            Removes the key-value pair at the given key. Returns the removed value.
+            \bitem{Delete Statement:} \mintinline{Python}{del d[index]} \\
+            When using the \mintinline{Python}{del} statement the removed value will not be
+            returned.
+        \end{itemize}
+        
+        \bitem{Dictionary Keys:} \mintinline{Python}{d.keys()} \\
+        The \mintinline{Python}{d.keys()} methods returns all the keys of a dictionary as a
+        dict\_keys
+        object. If you would like a normal list instead, just call the list constructor and pass the
+        dict\_keys object along as you would do with any iterable:
+        \mintinline{Python}{list(d.keys())}
+        
+        \bitem{Dictionary Values:} \mintinline{Python}{d.values()} \\
+        Returns a dict\_values object. Use \mintinline{Python}{list(d.values())} to get a list
+        instead.
+        
+        \bitem{Get Key-Value Pairs As List Of Tuples:} \mintinline{Python}{d.entries()} \\
+        Returns an iterable with tuples containing the key and value.
+        Is especially useful for iterating dictionaries:
+
+        \mypy{content/partials/collections/iterating_dictionaries.py}
+        \mytext{content/partials/collections/iterating_dictionaries.out}
+
+        \bitem{Membership Testing:}
+        \begin{itemize}
+            \bitem{Check For Key:} \mintinline{Python}{key in d}
+            \bitem{Check For Value:} \mintinline{Python}{key in d.values()}
+        \end{itemize}
+
+        \bitem{Length, Clear:} see \fullref{List}
+
+    \end{itemize}
+
 
   \subsection{Tuple}
 
