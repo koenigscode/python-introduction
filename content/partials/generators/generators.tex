@@ -9,18 +9,18 @@
     \mytext{content/partials/generators/gen.out}
     
     At first, we define a new generator.
-    The only thing keeping it apart from a function is the difference that functions return a
-    value whereas generators \textbf{yield} a value.
+    Functions only return one value, generators, on the other hand, can
+    \textbf{yield} multiple values.
     
-    Upon calling \mintinline{python}{gen()} on line 5 we get a generator object.
+    Upon calling \mintinline{python}{gen()} on line 14 we get a generator object, so an instance
+    of the generator function
     
     When we call \mintinline{python}{next(g)} (with g being the generator object) the generator
     function executes till it reaches the next \mintinline{python}{yield} statement.\\
-    Once a value is being \mintinline{python}{yielded}, the generator function stops and returns
-    the value yielded.\\
-    At the next \mintinline{python}{next(g)} the generator function gets resumed till it reaches
+    Once a value is being yielded, the generator function stops and returns
+    the yielded value.\\
+    At the next \mintinline{python}{next(g)} the generator function resumes till it reaches
     its next \mintinline{python}{yield}.
     
-    In this case, the generator would be able to provide \( 10^{10000} \) values.
     
     
