@@ -57,10 +57,17 @@
 
       \bitem{Reverse List:} \mintinline{Python}{l.reverse()}
 
-      \bitem{Sort List:} %TODO:
+      \bitem{Sort List (In Place):} \mintinline{Python}{l.sort()} \sep{,}
+      \mintinline{Python}{l.sort(key=<comparison function>, reverse=<boolean>)} \\
+      Sorts the list in place (i.e. changes the original list instead of returning a new one)\\
+      \textit{key} is an optional function used to compare the elements to each other.
 
-      \bitem{Clear Set:} \mintinline{python}{l.clear()}
+      \bitem{Sort List (As Copy):} \mintinline{Python}{l = sorted(iterable)} \sep{,} \\
+      \mintinline{Python}{sorted(iterable, key=<comparison function>, reverse=<boolean>)} \\
+      Returns a new, sorted list. Keeps the original iterable unchanged. 
 
+      \bitem{Clear List:} \mintinline{python}{l.clear()}
+      \\ \\
       Using the \mintinline{Python}{l.append()} and \mintinline{Python}{l.pop()} methods, lists
       can be used as stacks
 
