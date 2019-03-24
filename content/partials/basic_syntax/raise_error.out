@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "d:/work/code/python-introduction/content/partials/basic_syntax/raise_error.py", line 1, in <module>
+    raise ValueError("This a ValueError")
+ValueError: This a ValueError
