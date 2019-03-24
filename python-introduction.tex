@@ -3,7 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
-\usepackage{multirow, hyphenat, blindtext, hyperref, framed, textcomp, xcolor, fancyhdr, titling}
+\usepackage{multirow, hyphenat, blindtext, hyperref, framed, textcomp, xcolor, fancyhdr, titling,
+nameref}
 \usepackage[left=3cm, right=3cm]{geometry}
 \usepackage[stable]{footmisc}
 \usepackage[parfill]{parskip} % empty line instead of indent
@@ -62,6 +63,10 @@
   \hspace{0.05cm} #1 \hspace{0.05cm}%
 }
 
+\newcommand*{\fullref}[1]{%
+  \textit{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}%
+  }
+
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
 \renewcommand\maketitlehookd{\vfill\null}
 \renewcommand{\abstractname}{Introduction}
@@ -71,23 +76,23 @@
 \date{\today}
 
 \begin{document}
-  \begin{titlingpage}
-    \maketitle
-    \thispagestyle{firstpage}
-    
-    \begin{abstract}
-      \noindent
-      Python became one of the most popular programming languages in recent years
-      and is still growing; it allows programmers to achieve much in short syntax.\\
-      This introduction assumes knowledge in programming and is not an introduction
-      to programming in general.
-    \end{abstract}
-  \end{titlingpage}
+\begin{titlingpage}
+  \maketitle
+  \thispagestyle{firstpage}
 
-  \tableofcontents
-  \newpage
-  \pagestyle{content}
-  \setcounter{page}{1}
+  \begin{abstract}
+    \noindent
+    Python became one of the most popular programming languages in recent years
+    and is still growing; it allows programmers to achieve much in short syntax.\\
+    This introduction assumes knowledge in programming and is not an introduction
+    to programming in general.
+  \end{abstract}
+\end{titlingpage}
 
-  \input{"./content/content.tex"}
+\tableofcontents
+\newpage
+\pagestyle{content}
+\setcounter{page}{1}
+
+\input{"./content/content.tex"}
 \end{document}
