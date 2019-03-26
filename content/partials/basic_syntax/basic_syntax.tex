@@ -68,7 +68,17 @@
     You probably already know Error or Exception Handling from other object-oriented
     programming languages.
     
-    This is what its syntax looks like in Python:
+    Generally, we differentiate between two types of errors: syntax errors and exceptions \\
+    Syntax errors can - and must be - avoided, exception on the other hand can have different
+    origins. \\
+    For example you might ask the user for a number - you get the user's input in form
+    of a string. You then try to parse the string - however, before trying to parse a number from
+    it you don't know whether the user entered a valid number or not.
+
+    There's also a finally statement in Python which is used for clean-up actions like
+    closing files. It's always executed, even when an excpetion occured or you used a break,
+    continue or return statement.
+    
     \mypy{content/partials/basic_syntax/exception_handling.py}
     \mytext{content/partials/basic_syntax/exception_handling.out}
 
