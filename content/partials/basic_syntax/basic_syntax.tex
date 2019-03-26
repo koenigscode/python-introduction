@@ -44,6 +44,24 @@
       
       \mypy{content/partials/basic_syntax/string_formatting_examples.py}
       \mytext{content/partials/basic_syntax/string_formatting_examples.out}
+
+  \subsection{'Main' In Python}
+    You probably know the \textit{main()} method from other languages such as Java or C. \\
+    Python, on the other hand, is primarily used for scripting, meaning there's a specific file
+    to be run rather than a single executable program. \\
+    By default, a Python file is executed from top to bottom, no matter whether this is the
+    'main' file (the file started e.g. from the command line by using
+    \mintinline{bash}{python main.py}) or just a module imported by \textit{main.py}.
+
+    If you want some part of a program only executed if it's the 'main' file, so the 'entry point'
+    to your program, you can check whether a certain variable called \mintinline{Python}{__name__}
+    is equal to \mintinline{Python}{"__main__"}:
+
+    \mypy{content/partials/basic_syntax/main_example.py}
+    \mytext{content/partials/basic_syntax/main_example.out}
+
+    If you import this file from another file and execute the latter one, the code within the main
+    of the imported file will not be executed.
       
   
   \subsection{Exception Handling}
