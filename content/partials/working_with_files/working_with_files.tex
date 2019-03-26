@@ -1,1 +1,23 @@
 \section{Working With Files}
+
+  \subsection{Opening \& Closing Files}
+  The following code is probably pretty self-explanatory:
+  using the \mintinline{Python}{read()} function you get a file object
+  \footnote{actually TextIOWrapper} and can then read the file's content
+  - we will get more into that later.
+
+  Also, make sure to close the file after it is no longer needed.
+  
+  \mypy{content/partials/working_with_files/basic_file_example.py}
+  \mytext{content/partials/working_with_files/basic_file_example.out}
+
+  As you can see, opening and closing files is quite simple and using the 
+  \mintinline{Python}{with} \textbf{context manager} makes it even easier as it automatically
+  closes the file at the end of it:
+
+  \mypy{content/partials/working_with_files/with_context_manager.py}
+  \mytext{content/partials/working_with_files/with_context_manager.out}
+
+
+  \subsection{Reading Files}
+
