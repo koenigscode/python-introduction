@@ -45,3 +45,19 @@
       \mintinline{python}{import matplotlib.pylot as plt}.
 
   \subsection{pip}
+    pip is one of the most used package managers for Python and if you've got Python 3.4 or later
+    it's already installed on your system.
+
+    Installing a new package/module is as simple as running 
+    \mintinline{bash}{pip install <package_name>}
+
+    You should then be able to import the newly installed package in Python using the
+    \mintinline{Python}{import} statement.
+
+    As an example, let's install \href{https://scikit-learn.org/}{scikit-learn}, a library
+    for machine learning, and import it:
+    \mybash{content/partials/modules/install_sklearn.sh}
+    \mypy{content/partials/modules/install_sklearn.py}
+    \mytext{content/partials/modules/install_sklearn.out}
+
+    
