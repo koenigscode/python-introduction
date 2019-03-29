@@ -2,25 +2,22 @@
     Your memory probably can't handle a list of hundreds of thousands of elements.
     Therefore we use generators for tasks like this instead.
     Generators calculate and deliver a value when it's needed.
-    
+
     Consider the following example:
 
     \mypy{content/partials/generators/gen.py}
     \mytext{content/partials/generators/gen.out}
-    
+
     At first, we define a new generator.
     Functions only return one value, generators, on the other hand, can
     \textbf{yield} multiple values.
-    
+
     Upon calling \mintinline{python}{gen()} on line 14 we get a generator object, so an instance
     of the generator function
-    
+
     When we call \mintinline{python}{next(g)} (with g being the generator object) the generator
     function executes till it reaches the next \mintinline{python}{yield} statement.\\
     Once a value is being yielded, the generator function stops and returns
     the yielded value.\\
     At the next \mintinline{python}{next(g)} the generator function resumes till it reaches
     its next \mintinline{python}{yield}.
-    
-    
-    

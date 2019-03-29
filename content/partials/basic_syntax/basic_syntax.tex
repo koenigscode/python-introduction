@@ -1,99 +1,99 @@
 \section{Basic Syntax}
 
-  \subsection{If/Else \& For In}
-    \mypy{content/partials/basic_syntax/if_else_for_in.py}
-    \mytext{content/partials/basic_syntax/if_else_for_in.out}
+    \subsection{If/Else \& For In}
+        \mypy{content/partials/basic_syntax/if_else_for_in.py}
+        \mytext{content/partials/basic_syntax/if_else_for_in.out}
 
-  \subsection{Ternary Operator (Inline If/Else)}
-    The ternary operators works like in other languages, however, you're not using special
-    characters like \textit{?} or \textit{:} but the keywords \textit{if} and \textit{else}
-    
-    \mypy{content/partials/basic_syntax/inline_if.py}
-    \mytext{content/partials/basic_syntax/inline_if.out}
-    Note that, however, \mintinline{python}{x = 1 if some_condition} is not valid; you need an
-    \mintinline{python}{else} statement.
+    \subsection{Ternary Operator (Inline If/Else)}
+        The ternary operators works like in other languages, however, you're not using special
+        characters like \textit{?} or \textit{:} but the keywords \textit{if} and \textit{else}
 
-  \subsection{Chaining Conditions}
-    Python enables you to chain conditions:
-    
-    \mypy{content/partials/basic_syntax/chaining_conditions.py}
-    \mytext{content/partials/basic_syntax/chaining_conditions.out}
+        \mypy{content/partials/basic_syntax/inline_if.py}
+        \mytext{content/partials/basic_syntax/inline_if.out}
+        Note that, however, \mintinline{python}{x = 1 if some_condition} is not valid; you need an
+        \mintinline{python}{else} statement.
 
-  \subsection{Strings And Comments}
-    Single line comments start with a \#, docstrings ('multiline comments') comments start and end
-    with """. \\
-    However, you should use \# for 'normal' comments and """ for docstrings (e.g. explaining the
-    purpose of a class or function).
-    
-    You can also use """ to create multiline strings:
-    
-    \mypy{content/partials/basic_syntax/comments_multiline_strings.py}
-    \mytext{content/partials/basic_syntax/comments_multiline_strings.out}
-  
-    \subsubsection{String Formatting}
-      Concatenating strings with numbers (e.g. \mintinline{python}{"Python" + 101}) results in an
-      error. \\
-      Gladly, there are some workarounds on how to format your strings:
-    
-      \textbf{Making everything a string} \\
-      \mintinline{python}{"Python" + str(101)} 
-      
-      \textbf{Modulo Operator} \\
-      \mintinline{python}{"Python %s" % (101)} \\
-      Calculating \texttt{string \% tuple} works because Python enables you to overwrite operators.
-      This has nothing to do with an actual modulo operation, it's just used for simplicity.
-      To learn more about operator overloading, take a look at \fullref{Object Oriented Programming}
-        
-      \textbf{Format Method} \\
-      \mintinline{python}{"Python {}".format(101)} 
-      
-      \textbf{F-Strings} \\
-      \mintinline{python}{f"Python {101}"}
-  
-        
-      Here are some examples:
-      
-      \mypy{content/partials/basic_syntax/string_formatting_examples.py}
-      \mytext{content/partials/basic_syntax/string_formatting_examples.out}
+    \subsection{Chaining Conditions}
+        Python enables you to chain conditions:
 
-  \subsection{'Main' In Python}
-    You probably know the \textit{main()} method from other languages such as Java or C. \\
-    Python, on the other hand, is primarily used for scripting, meaning there's a specific file
-    to be run rather than a single executable program. \\
-    By default, a Python file is executed from top to bottom, no matter whether this is the
-    'main' file (the file started e.g. from the command line by using
-    \mintinline{bash}{python main.py}) or just a module imported by \textit{main.py}.
+        \mypy{content/partials/basic_syntax/chaining_conditions.py}
+        \mytext{content/partials/basic_syntax/chaining_conditions.out}
 
-    If you want some part of a program only executed if it's the 'main' file, so the 'entry point'
-    to your program, you can check whether a certain variable called \mintinline{Python}{__name__}
-    is equal to \mintinline{Python}{"__main__"}:
+    \subsection{Strings And Comments}
+        Single line comments start with a \#, docstrings ('multiline comments') comments start and
+        end with """. \\
+        However, you should use \# for 'normal' comments and """ for docstrings (e.g. explaining the
+        purpose of a class or function).
 
-    \mypy{content/partials/basic_syntax/main_example.py}
-    \mytext{content/partials/basic_syntax/main_example.out}
+        You can also use """ to create multiline strings:
 
-    If you import this file from another file and execute the latter one, the code within the main
-    of the imported file will not be executed.
-      
-  
-  \subsection{Exception Handling}
-    You probably already know Error or Exception Handling from other object-oriented
-    programming languages.
-    
-    Generally, we differentiate between two types of errors: syntax errors and exceptions \\
-    Syntax errors can - and must be - avoided, exception on the other hand can have different
-    origins. \\
-    For example you might ask the user for a number - you get the user's input in form
-    of a string. You then try to parse the string - however, before trying to parse a number from
-    it you don't know whether the user entered a valid number or not.
+        \mypy{content/partials/basic_syntax/comments_multiline_strings.py}
+        \mytext{content/partials/basic_syntax/comments_multiline_strings.out}
 
-    There's also a finally statement in Python which is used for clean-up actions like
-    closing files. It's always executed, even when an excpetion occured or you used a break,
-    continue or return statement.
-    
-    \mypy{content/partials/basic_syntax/exception_handling.py}
-    \mytext{content/partials/basic_syntax/exception_handling.out}
+        \subsubsection{String Formatting}
+        Concatenating strings with numbers (e.g. \mintinline{python}{"Python" + 101}) results in an
+        error. \\
+        Gladly, there are some workarounds on how to format your strings:
 
-    If you want to raise (in other languages 'throw') an error, use the raise keyword:
-    \mypy{content/partials/basic_syntax/raise_exception.py}
-    \mytext{content/partials/basic_syntax/raise_exception.out}
+        \textbf{Making everything a string} \\
+        \mintinline{python}{"Python" + str(101)}
 
+        \textbf{Modulo Operator} \\
+        \mintinline{python}{"Python %s" % (101)} \\
+        Calculating \texttt{string \% tuple} works because Python enables you to overwrite
+        operators. This has nothing to do with an actual modulo operation, it's just used for
+        simplicity. To learn more about operator overloading, take a look at
+        \fullref{Object Oriented Programming}
+
+        \textbf{Format Method} \\
+        \mintinline{python}{"Python {}".format(101)}
+
+        \textbf{F-Strings} \\
+        \mintinline{python}{f"Python {101}"}
+
+
+        Here are some examples:
+
+        \mypy{content/partials/basic_syntax/string_formatting_examples.py}
+        \mytext{content/partials/basic_syntax/string_formatting_examples.out}
+
+    \subsection{'Main' In Python}
+        You probably know the \textit{main()} method from other languages such as Java or C. \\
+        Python, on the other hand, is primarily used for scripting, meaning there's a specific file
+        to be run rather than a single executable program. \\
+        By default, a Python file is executed from top to bottom, no matter whether this is the
+        'main' file (the file started e.g. from the command line by using
+        \mintinline{bash}{python main.py}) or just a module imported by \textit{main.py}.
+
+        If you want some part of a program only executed if it's the 'main' file, so the
+        'entry point' to your program, you can check whether a certain variable called
+        \mintinline{Python}{__name__} is equal to \mintinline{Python}{"__main__"}:
+
+        \mypy{content/partials/basic_syntax/main_example.py}
+        \mytext{content/partials/basic_syntax/main_example.out}
+
+        If you import this file from another file and execute the latter one, the code within the
+        main of the imported file will not be executed.
+
+
+    \subsection{Exception Handling}
+        You probably already know Error or Exception Handling from other object-oriented
+        programming languages.
+
+        Generally, we differentiate between two types of errors: syntax errors and exceptions \\
+        Syntax errors can - and must be - avoided, exception on the other hand can have different
+        origins. \\
+        For example you might ask the user for a number - you get the user's input in form
+        of a string. You then try to parse the string - however, before trying to parse a number
+        from it you don't know whether the user entered a valid number or not.
+
+        There's also a finally statement in Python which is used for clean-up actions like
+        closing files. It's always executed, even when an excpetion occured or you used a break,
+        continue or return statement.
+
+        \mypy{content/partials/basic_syntax/exception_handling.py}
+        \mytext{content/partials/basic_syntax/exception_handling.out}
+
+        If you want to raise (in other languages 'throw') an error, use the raise keyword:
+        \mypy{content/partials/basic_syntax/raise_exception.py}
+        \mytext{content/partials/basic_syntax/raise_exception.out}

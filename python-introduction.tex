@@ -15,14 +15,14 @@ nameref}
 \pagestyle{empty}
 
 \fancypagestyle{firstpage}{
-  \fancyfoot{}
-  \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot{}
+    \renewcommand{\headrulewidth}{0pt}
 }
 
 \fancypagestyle{content} {
-  \lhead{Michael König}
-  \rhead{\thepage}
-  \fancyfoot{}
+    \lhead{Michael König}
+    \rhead{\thepage}
+    \fancyfoot{}
 }
 
 \hypersetup{
@@ -32,53 +32,53 @@ nameref}
 }
 
 \newmintedfile[mypy]{python}{
-  fontfamily=tt,
-  breaklines=true,
-  linenos=true,
-  numberblanklines=true,
-  numbersep=5pt,
-  gobble=0,
-  frame=single,
-  framerule=0.4pt,
-  framesep=2mm,
-  funcnamehighlighting=true,
-  tabsize=2,
-  obeytabs=false,
-  mathescape=false
-  showspaces=false,
-  showtabs =false,
-  texcl=false,
+    fontfamily=tt,
+    breaklines=true,
+    linenos=true,
+    numberblanklines=true,
+    numbersep=5pt,
+    gobble=0,
+    frame=single,
+    framerule=0.4pt,
+    framesep=2mm,
+    funcnamehighlighting=true,
+    tabsize=2,
+    obeytabs=false,
+    mathescape=false
+    showspaces=false,
+    showtabs =false,
+    texcl=false,
 }
 
 \newmintedfile[mytext]{text}{
-  fontsize=\small,
-  breaklines=true
+    fontsize=\small,
+    breaklines=true
 }
 
 \newmintedfile[mybash]{bash}{
-  fontfamily=tt,
-  breaklines=true,
-  numbersep=5pt,
-  gobble=0,
-  funcnamehighlighting=true,
-  tabsize=2,
-  obeytabs=false,
-  mathescape=false
-  showspaces=false,
-  showtabs =false,
-  texcl=false,
+    fontfamily=tt,
+    breaklines=true,
+    numbersep=5pt,
+    gobble=0,
+    funcnamehighlighting=true,
+    tabsize=2,
+    obeytabs=false,
+    mathescape=false
+    showspaces=false,
+    showtabs =false,
+    texcl=false,
 }
 
 \newcommand{\bitem}[1]{%
-  \item\textbf{#1}%
+    \item\textbf{#1}%
 }
 
 \newcommand{\sep}[1]{%
-  \hspace{0.05cm} #1 \hspace{0.05cm}%
+    \hspace{0.05cm} #1 \hspace{0.05cm}%
 }
 
 \newcommand*{\fullref}[1]{%
-  \textit{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}%
+    \textit{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}%
   }
 
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
@@ -91,16 +91,16 @@ nameref}
 
 \begin{document}
 \begin{titlingpage}
-  \maketitle
-  \thispagestyle{firstpage}
+    \maketitle
+    \thispagestyle{firstpage}
 
-  \begin{abstract}
-    \noindent
-    Python became one of the most popular programming languages in recent years
-    and is still growing; it allows programmers to achieve much in short syntax.\\
-    This introduction assumes knowledge in programming and is not an introduction
-    to programming in general.
-  \end{abstract}
+    \begin{abstract}
+        \noindent
+        Python became one of the most popular programming languages in recent years
+        and is still growing; it allows programmers to achieve much in short syntax.\\
+        This introduction assumes knowledge in programming and is not an introduction
+        to programming in general.
+    \end{abstract}
 \end{titlingpage}
 
 \tableofcontents
