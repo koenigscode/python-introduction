@@ -20,8 +20,10 @@
     \mytext{content/partials/basic_syntax/chaining_conditions.out}
 
   \subsection{Strings And Comments}
-    Single line comments start with a \#, docstrings ('multiline comments') comments start and end with """. \\
-    However, you should use \# for 'normal' comments and """ for docstrings (e.g. explaining the purpose of a class or function).
+    Single line comments start with a \#, docstrings ('multiline comments') comments start and end
+    with """. \\
+    However, you should use \# for 'normal' comments and """ for docstrings (e.g. explaining the
+    purpose of a class or function).
     
     You can also use """ to create multiline strings:
     
@@ -29,16 +31,25 @@
     \mytext{content/partials/basic_syntax/comments_multiline_strings.out}
   
     \subsubsection{String Formatting}
-      Concatenating strings with numbers (e.g. \mintinline{python}{"Python" + 101}) results in an error. \\
+      Concatenating strings with numbers (e.g. \mintinline{python}{"Python" + 101}) results in an
+      error. \\
       Gladly, there are some workarounds on how to format your strings:
     
-      \begin{enumerate}
-        \bitem{Making everything a string:} \mintinline{python}{"Python" + str(101)}
-        \bitem{Modulo Operator:} \mintinline{python}{"Python %s" % (101)} \\
-          Calculating string module tuple works because Python enables you to overwrite operators. This has nothing to do with an actual modulo operation, it's just an easy-to-use syntax.
-        \bitem{Format Method:} \mintinline{python}{"Python {}".format(101)}
-        \bitem{F-Strings:} \mintinline{python}{f"Python {101}"}
-      \end{enumerate}
+      \textbf{Making everything a string} \\
+      \mintinline{python}{"Python" + str(101)} 
+      
+      \textbf{Modulo Operator} \\
+      \mintinline{python}{"Python %s" % (101)} \\
+      Calculating \texttt{string \% tuple} works because Python enables you to overwrite operators.
+      This has nothing to do with an actual modulo operation, it's just used for simplicity.
+      To learn more about operator overloading, take a look at \fullref{Object Oriented Programming}
+        
+      \textbf{Format Method} \\
+      \mintinline{python}{"Python {}".format(101)} 
+      
+      \textbf{F-Strings} \\
+      \mintinline{python}{f"Python {101}"}
+  
         
       Here are some examples:
       
