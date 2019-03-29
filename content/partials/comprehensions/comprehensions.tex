@@ -1,9 +1,75 @@
 \section{Comprehensions}
 
+    Often you want to create basic collections following a simple pattern, let's say a list
+    containing all the squares of the numbers 1 to 10. You had to create an empty list and then
+    fill it within a for loop. \\
+    To do this with less code, Python provides different kinds of comprehensions to create
+    collections in one line. \\
+    The list comprehension will probably be your most used one:
+
     \subsection{List Comprehensions}
+
+        Let's take the example I just talked about and code it with the knowledge we
+        acquired so far:
+
+        \mypy{content/partials/comprehensions/normal_list.py}
+        \mytext{content/partials/comprehensions/normal_list.out}
+
+        To achieve the same with a list comprehension:
+
+        \mypy{content/partials/comprehensions/list_comp.py}
+        \mytext{content/partials/comprehensions/list_comp.out}
+
+        The \textbf{first expression} - in this case \mintinline{Python}{x**2} -
+        is \textbf{added to the list} and this is repeated for every \mintinline{Python}{x} in
+        \mintinline{Python}{range(1,11)}, so the numbers 1-10 (as the end of the range -
+        the second parameter - is exclusive). \\
+        You can also use nested for loops:
+        \mintinline{Python}{l = [x for x in item for item in list]}
+
+        \subsubsection{Filtering Elements}
+
+            If you only want to add an element to the list if a certain criteria is met, you can add
+            an \mintinline{Python}{if} statement \textbf{at the end of the comprehension}:
+
+            \mypy{content/partials/comprehensions/list_comp_if.py}
+            \mytext{content/partials/comprehensions/list_comp_if.out}
+
+        \subsubsection{Ternary Operator}
+
+            You can use the ternary operator in the first expression of the comprehension to decide
+            which value to add to the list based on some condition.
+
+            Note that the ternary operator - the \textbf{if at the start of the comprehension} -
+            decides on which value to add to the list and the if at the end of the comprehension
+            decides on whether the element should even be added to the list or not.
+
+            \mypy{content/partials/comprehensions/list_comp_tern.py}
+            \mytext{content/partials/comprehensions/list_comp_tern.out}
+
+            As you can see, the comprehension got quite long and therefore I decided to put
+            a line break in.
+
+            \textbf{If your comprehension gets complex you should definitely consider using a normal
+            loop instead}, as it's probably easier to read.
 
     \subsection{Set Comprehensions}
 
+        Set comprehension work just like list comprehension with the difference that they return a
+        set instead (so duplicates are filtered out) and are created using two curly braces:
+        \mintinline{Python}{s = {item for item in iterable}}
+
     \subsection{Dictionary Comprehensions}
 
+        Dictionary comprehensions use curly braces, however their first expression is a key-value
+        pair:
+
+        \mypy{content/partials/comprehensions/dict_comp.py}
+        \mytext{content/partials/comprehensions/dict_comp.out}
+
     \subsection{Generator Comprehensions}
+
+        Generator comprehensions use parentheses and create and instance of a generator:
+
+        \mypy{content/partials/comprehensions/gen_comp.py}
+        \mytext{content/partials/comprehensions/gen_comp.out}
