@@ -1,0 +1,8 @@
+This is a text file.
+It contains multiple lines,
+as you can see.
+----------
+This is a text file.
+It contains multiple lines,
+----------
+['This is a text file.\n', 'It contains multiple lines,\n', 'as you can see.']

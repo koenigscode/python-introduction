@@ -1,23 +1,54 @@
 \section{Working With Files}
 
-  \subsection{Opening \& Closing Files}
-  The following code is probably pretty self-explanatory:
-  using the \mintinline{Python}{read()} function you get a file object
-  \footnote{actually TextIOWrapper} and can then read the file's content
-  - we will get more into that later.
+\subsection{Opening \& Closing Files}
+The following code is probably pretty self-explanatory:
+using the \mintinline{Python}{read()} function you get a file object
+\footnote{actually TextIOWrapper} and can then read the file's content
+- we will get more into that later.
 
-  Also, make sure to close the file after it is no longer needed.
-  
-  \mypy{content/partials/working_with_files/basic_file_example.py}
-  \mytext{content/partials/working_with_files/basic_file_example.out}
+Also, make sure to close the file after it is no longer needed.
 
-  As you can see, opening and closing files is quite simple and using the 
-  \mintinline{Python}{with} \textbf{context manager} makes it even easier as it automatically
-  closes the file at the end of it:
+\mypy{content/partials/working_with_files/basic_file_example.py}
+\mytext{content/partials/working_with_files/basic_file_example.out}
 
-  \mypy{content/partials/working_with_files/with_context_manager.py}
-  \mytext{content/partials/working_with_files/with_context_manager.out}
+As you can see, opening and closing files is quite simple and using the
+\mintinline{Python}{with} \textbf{context manager} makes it even easier as it automatically
+closes the file at the end of it:
+
+\mypy{content/partials/working_with_files/with_context_manager.py}
+\mytext{content/partials/working_with_files/with_context_manager.out}
 
 
-  \subsection{Reading Files}
+\subsection{Reading Files}
 
+All of the following methods \textbf{change the SPI}, the stream position indicator, so the
+'current position of the cursor within the file'.
+
+If you read parts of the file, the SPI moves. If you then use another read method, it will
+start where to old one left off.
+
+\textbf{Get the current SPI position} \\
+\mintinline{Python}{f.tell()}
+
+\textbf{Set the SPI position} \\
+\mintinline{Python}{f.seek(idx)} \sep{,}
+idx=0 sets the SPI to the beginning of the file
+
+\textbf{Read whole file as string} \\
+\mintinline{Python}{f.read() -> str}
+
+\textbf{Read one line (till next linebreak)} \\
+\mintinline{Python}{f.readline() -> str}
+
+\textbf{Read whole file as list of lines} \\
+\mintinline{Python}{f.readlines() -> []} \\
+Useful to iterate over a file's lines: \mintinline{Python}{for line in f.readlines(): # ...}
+
+Example:
+\mypy{content/partials/working_with_files/read_file.py}
+\mytext{content/partials/working_with_files/read_file.out}
+
+The \mintinline{Python}{end=""} parameter of the \mintinline{Python}{print()} function
+removes the \textit{\textbackslash n} that would usually be printed at the end of the line. \\
+As the read line already contains a line break, I didn't print the extra one from the
+\mintinline{Python}{print()} function.
