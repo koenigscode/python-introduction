@@ -35,21 +35,25 @@
         error. \\
         Gladly, there are some workarounds on how to format your strings:
 
-        \textbf{Making everything a string} \\
-        \mintinline{python}{"Python" + str(101)}
+        \begin{indentblock}
 
-        \textbf{Modulo Operator} \\
-        \mintinline{python}{"Python %s" % (101)} \\
-        Calculating \texttt{string \% tuple} works because Python enables you to overwrite
-        operators. This has nothing to do with an actual modulo operation, it's just used for
-        simplicity. To learn more about operator overloading, take a look at
-        \fullref{Object Oriented Programming}
+            \textbf{Making everything a string} \\
+            \mintinline{python}{"Python" + str(101)}
 
-        \textbf{Format Method} \\
-        \mintinline{python}{"Python {}".format(101)}
+            \textbf{Modulo Operator} \\
+            \mintinline{python}{"Python %s" % (101)} \\
+            Calculating \texttt{string \% tuple} works because Python enables you to overwrite
+            operators. This has nothing to do with an actual modulo operation, it's just used for
+            simplicity. To learn more about operator overloading, take a look at
+            \fullref{Object Oriented Programming}
 
-        \textbf{F-Strings} \\
-        \mintinline{python}{f"Python {101}"}
+            \textbf{Format Method} \\
+            \mintinline{python}{"Python {}".format(101)}
+
+            \textbf{F-Strings} \\
+            \mintinline{python}{f"Python {101}"}
+
+        \end{indentblock}
 
 
         Here are some examples:

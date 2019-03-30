@@ -3,8 +3,8 @@
     \subsection{List} \label{List}
         A list is an ordered collection, allows duplicate members and is changeable.
 
-        \begin{itemize}
-        \bitem{Creation:} \mintinline{python}{l = []} \sep{,} \mintinline{python}{l = [1,2,3]}
+        \begin{indentblock}
+            \textbf{Creation:} \mintinline{python}{l = []} \sep{,} \mintinline{python}{l = [1,2,3]}
         \sep{,} \mintinline{python}{l = list()} \sep{,} \mintinline{python}{l = list(iterable)}
 
         You can create a new list using either two square brackets or the list constructor.
@@ -14,13 +14,13 @@
         \mypy{content/partials/collections/list_example.py}
         \mytext{content/partials/collections/list_example.out}
 
-        \bitem{Append Item:} \mintinline{python}{l.append(item)}
+            \textbf{Append Item:} \mintinline{python}{l.append(item)}
 
-        \bitem{Set Item At Index:} \mintinline{Python}{l[index] = item}
+            \textbf{Set Item At Index:} \mintinline{Python}{l[index] = item}
 
-        \bitem{Insert Item At Index:} \mintinline{python}{l.insert(index, item)}
+            \textbf{Insert Item At Index:} \mintinline{python}{l.insert(index, item)}
 
-        \bitem{Extend List:} \mintinline{python}{l.extend(iterable)} \\
+            \textbf{Extend List:} \mintinline{python}{l.extend(iterable)} \\
         \mintinline{python}{l.append([1,2,3])} would add a list containing three items to our list.
         So when we want the items of an iterable (e.g. list) to be added item for item to our list,
         we can extend our list with that iterable.
@@ -28,21 +28,21 @@
         \mypy{content/partials/collections/extend_example.py}
         \mytext{content/partials/collections/extend_example.out}
 
-        \bitem{Access Item:} \mintinline{python}{item = l[index]} \sep{,}
+            \textbf{Access Item:} \mintinline{python}{item = l[index]} \sep{,}
         see \fullref{List Slicing} for advanced syntax
 
-        \bitem{List Length:} \mintinline{Python}{len(l)}
+            \textbf{List Length:} \mintinline{Python}{len(l)}
 
-        \bitem{Occurences Of Item:} \mintinline{Python}{l.count(item)}
+            \textbf{Occurences Of Item:} \mintinline{Python}{l.count(item)}
 
-        \bitem{Index Of Item:} \mintinline{Python}{l.index(item)}
+            \textbf{Index Of Item:} \mintinline{Python}{l.index(item)}
 
-        \bitem{Change Item Value:} \mintinline{python}{l[3] = "new value"}
+            \textbf{Change Item Value:} \mintinline{python}{l[3] = "new value"}
 
-        \bitem{Remove Item By Value:} \mintinline{python}{l.remove(item)} \\
+            \textbf{Remove Item By Value:} \mintinline{python}{l.remove(item)} \\
         Removes the item if it is present, otherwise raises KeyError.
 
-        \bitem{Remove Item By Index:}
+            \textbf{Remove Item By Index:}
         \begin{itemize}
             \bitem{Pop:} \mintinline{Python}{l.pop()} \sep{,}
             \mintinline{Python}{l.pop(index)} \\
@@ -54,26 +54,26 @@
         \end{itemize}
 
 
-        \bitem{Membership Testing:} \mintinline{python}{item in l} \sep{,}
+            \textbf{Membership Testing:} \mintinline{python}{item in l} \sep{,}
         \mintinline{python}{item not in l}
 
-        \bitem{Reverse List:} \mintinline{Python}{l.reverse()}
+            \textbf{Reverse List:} \mintinline{Python}{l.reverse()}
 
-        \bitem{Sort List (In Place):} \mintinline{Python}{l.sort()} \sep{,}
+            \textbf{Sort List (In Place):} \mintinline{Python}{l.sort()} \sep{,}
         \mintinline{Python}{l.sort(key=<comparison function>, reverse=<boolean>)} \\
         Sorts the list in place (i.e. changes the original list instead of returning a new one)\\
         \textit{key} is an optional function used to compare the elements to each other.
 
-        \bitem{Sort List (As Copy):} \mintinline{Python}{l = sorted(iterable)} \sep{,} \\
+            \textbf{Sort List (As Copy):} \mintinline{Python}{l = sorted(iterable)} \sep{,} \\
         \mintinline{Python}{sorted(iterable, key=<comparison function>, reverse=<boolean>)} \\
         Returns a new, sorted list. Keeps the original iterable unchanged.
 
-        \bitem{Clear List:} \mintinline{python}{l.clear()}
+            \textbf{Clear List:} \mintinline{python}{l.clear()}
         \\ \\
         Using the \mintinline{Python}{l.append()} and \mintinline{Python}{l.pop()} methods, lists
         can be used as stacks
 
-        \end{itemize}
+        \end{indentblock}
 
         \subsubsection{List Slicing} \label{List Slicing}
 
@@ -81,32 +81,34 @@
         A set is an unordered (therefore unindexed) and  changeable collection without duplicate
         items.
 
-        \begin{itemize}
-        \bitem{Creation:} \mintinline{python}{s = set()} \sep{,}
+        \begin{indentblock}
+
+            \textbf{Creation:} \mintinline{python}{s = set()} \sep{,}
         \mintinline{python}{s = set(iterable)} \\
         You \textbf{cannot} create a set using two empty curly braces \textit{\{ \}} as this would
         create an empty dictionary.
 
-        \bitem{Add Item:} \mintinline{python}{s.add(item)} \\
+            \textbf{Add Item:} \mintinline{python}{s.add(item)} \\
         If the element is already in the list, it won't be added again.
 
-        \bitem{Update (Extend) Set:} \mintinline{python}{s.update(iterable)} \\
+            \textbf{Update (Extend) Set:} \mintinline{python}{s.update(iterable)} \\
         Adds all elements from \textit{iterable} to the set.
 
-        \bitem{Remove Item:} \mintinline{python}{s.remove(item)} \\
+            \textbf{Remove Item:} \mintinline{python}{s.remove(item)} \\
         Removes the item if it is present, otherwise raises KeyError.
 
-        \bitem{Discard Item:} \mintinline{python}{s.discard(item)} \\
+            \textbf{Discard Item:} \mintinline{python}{s.discard(item)} \\
         Removes the element if it is present, otherwise does nothing.
 
-        \bitem{Membership Testing, Length, Clear:} see \fullref{List}
-        \end{itemize}
+            \textbf{Membership Testing, Length, Clear:} see \fullref{List}
+
+         \end{indentblock}
 
     \subsection{Dictionary}
         A dictionary \textit{(map, associative array)} is a mapping of key-value pairs.
 
-        \begin{itemize}
-            \bitem{Creation:} \mintinline{Python}{d = {}} \sep{,}
+        \begin{indentblock}
+            \textbf{Creation:} \mintinline{Python}{d = {}} \sep{,}
             \mintinline{Python}{d = {key: val}} \\
             \mintinline{Python}{d = dict()} \sep{,} \mintinline{Python}{d = dict(iterable)} \\
             You can create a dictionary from an iterable containing indexable items (e.g. lists)
@@ -115,16 +117,16 @@
             \mypy{content/partials/collections/dictionary_example.py}
             \mytext{content/partials/collections/dictionary_example.out}
 
-            \bitem{Add Key-Value Pair:} \mintinline{Python}{d[key] = val}
+            \textbf{Add Key-Value Pair:} \mintinline{Python}{d[key] = val}
 
-            \bitem{Update (Extend) Set:} \mintinline{python}{d.update(dictionary)} \sep{,}
+            \textbf{Update (Extend) Set:} \mintinline{python}{d.update(dictionary)} \sep{,}
             \mintinline{python}{d.update(iterable)} \\
             Adds all key-value pairs from the given\textit{dictionary} to the dictionary
             \textit{d}.\\
             You can also extend the dictionary with an iterable containing indexable items
             (e.g. lists) like when creating a new dictionary (see Dictionary Creation)
 
-            \bitem{Access Value:}
+            \textbf{Access Value:}
             \begin{itemize}
                 \bitem{d[key]:} \mintinline{Python}{val = d[key]} \\
                 Raises a KeyError if the dictionary does not contain the key.
@@ -134,7 +136,7 @@
                 The default value's default value is None.
             \end{itemize}
 
-            \bitem{Remove Item:}
+            \textbf{Remove Item:}
             \begin{itemize}
                 \bitem{Pop:} \mintinline{Python}{d.pop(key)}
                 Removes the key-value pair at the given key. Returns the removed value.
@@ -143,33 +145,33 @@
                 returned.
             \end{itemize}
 
-            \bitem{Dictionary Keys:} \mintinline{Python}{d.keys()} \\
+            \textbf{Dictionary Keys:} \mintinline{Python}{d.keys()} \\
             The \mintinline{Python}{d.keys()} methods returns all the keys of a dictionary as a
             dict\_keys
             object. If you would like a normal list instead, just call the list constructor and pass
             the dict\_keys object along as you would do with any iterable:
             \mintinline{Python}{list(d.keys())}
 
-            \bitem{Dictionary Values:} \mintinline{Python}{d.values()} \\
+            \textbf{Dictionary Values:} \mintinline{Python}{d.values()} \\
             Returns a dict\_values object. Use \mintinline{Python}{list(d.values())} to get a list
             instead.
 
-            \bitem{Get Key-Value Pairs As List Of Tuples:} \mintinline{Python}{d.entries()} \\
+            \textbf{Get Key-Value Pairs As List Of Tuples:} \mintinline{Python}{d.entries()} \\
             Returns an iterable with tuples containing the key and value.
             Is especially useful for iterating dictionaries:
 
             \mypy{content/partials/collections/iterating_dictionaries.py}
             \mytext{content/partials/collections/iterating_dictionaries.out}
 
-            \bitem{Membership Testing:}
+            \textbf{Membership Testing:}
             \begin{itemize}
                 \bitem{Check For Key:} \mintinline{Python}{key in d}
                 \bitem{Check For Value:} \mintinline{Python}{key in d.values()}
             \end{itemize}
 
-            \bitem{Length, Clear:} see \fullref{List}
+            \textbf{Length, Clear:} see \fullref{List}
 
-        \end{itemize}
+        \end{indentblock}
 
 
     \subsection{Tuple}

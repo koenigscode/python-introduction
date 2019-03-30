@@ -26,22 +26,26 @@
         If you read parts of the file, the SPI moves. If you then use another read method, it will
         start where to old one left off.
 
-        \textbf{Get the current SPI position} \\
-        \mintinline{Python}{f.tell()}
+        \begin{indentblock}
 
-        \textbf{Set the SPI position} \\
-        \mintinline{Python}{f.seek(idx)} \sep{,}
-        idx=0 sets the SPI to the beginning of the file
+            \textbf{Get the current SPI position} \\
+            \mintinline{Python}{f.tell()}
 
-        \textbf{Read whole file as string} \\
-        \mintinline{Python}{f.read() -> str}
+            \textbf{Set the SPI position} \\
+            \mintinline{Python}{f.seek(idx)} \sep{,}
+            idx=0 sets the SPI to the beginning of the file
 
-        \textbf{Read one line (till next linebreak)} \\
-        \mintinline{Python}{f.readline() -> str}
+            \textbf{Read whole file as string} \\
+            \mintinline{Python}{f.read() -> str}
 
-        \textbf{Read whole file as list of lines} \\
-        \mintinline{Python}{f.readlines() -> []} \\
-        Useful to iterate over a file's lines: \mintinline{Python}{for line in f.readlines(): # ...}
+            \textbf{Read one line (till next linebreak)} \\
+            \mintinline{Python}{f.readline() -> str}
+
+            \textbf{Read whole file as list of lines} \\
+            \mintinline{Python}{f.readlines() -> []} \\
+            Useful to iterate over a file's lines: \mintinline{Python}{for line in f.readlines(): # ...}
+
+        \end{indentblock}
 
         Example:
         \mypy{content/partials/working_with_files/read_file.py}

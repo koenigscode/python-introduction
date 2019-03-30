@@ -12,6 +12,13 @@ nameref}
 
 \renewcommand{\familydefault}{\sfdefault}
 
+\newenvironment{indentblock}[1][0.5cm]%
+{\begin{list}{}%
+    {\setlength{\leftmargin}{#1}}%
+    \item[]%
+}
+{\end{list}}
+
 \pagestyle{empty}
 
 \fancypagestyle{firstpage}{
