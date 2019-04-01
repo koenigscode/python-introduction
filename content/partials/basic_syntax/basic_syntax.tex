@@ -4,6 +4,29 @@
         \mypy{content/partials/basic_syntax/if_else_for_in.py}
         \mytext{content/partials/basic_syntax/if_else_for_in.out}
 
+    \subsection{Operators}
+        Python provides some special operators:
+
+        \mypy{content/partials/basic_syntax/operators.py}
+        \mytext{content/partials/basic_syntax/operators.out}
+
+        Note that there is no \mintinline{Python}{x++} in Python; you need to use
+        \mintinline{Python}{x += 1}.
+
+    \subsection{Read From Command Line}
+        You can read an input from the command line using the
+        \mintinline{Python}{input(<prompt text>)} function:
+
+        \mypy{content/partials/basic_syntax/read_cl.py}
+        \mytext{content/partials/basic_syntax/read_cl.out}
+
+    \subsection{Parse Numbers}
+        You can parse numbers from strings using the
+        \mintinline{Python}{int()} and \mintinline{Python}{float()} methods:
+
+        \mypy{content/partials/basic_syntax/parse_numbers.py}
+        \mytext{content/partials/basic_syntax/parse_numbers.out}
+
     \subsection{Ternary Operator (Inline If/Else)}
         The ternary operators works like in other languages, however, you're not using special
         characters like \textit{?} or \textit{:} but the keywords \textit{if} and \textit{else}
