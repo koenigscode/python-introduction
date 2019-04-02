@@ -4,6 +4,29 @@
         \mypy{content/partials/basic_syntax/if_else_for_in.py}
         \mytext{content/partials/basic_syntax/if_else_for_in.out}
 
+        \subsubsection{Chaining Conditions}
+            Python enables you to chain conditions:
+
+            \mypy{content/partials/basic_syntax/chaining_conditions.py}
+            \mytext{content/partials/basic_syntax/chaining_conditions.out}
+
+    \subsection{Data Types}
+        Python basically has the following data types:
+        \begin{itemize}
+            \item Integer
+            \item Float
+            \item Complex Number
+            \item String
+            \item Boolean (\mintinline{Python}{True} and \mintinline{Python}{False})
+            \item None (null in other languages)
+            \item Function
+        \end{itemize}
+
+        You can negate booleans using the \mintinline{Python}{not statement}:
+        \mintinline{Python}{not False == True}
+
+        It also features collections like sets and dictionarys by default, see \fullref{Colletions}
+
     \subsection{Read From Command Line}
         You can read an input from the command line using the
         \mintinline{Python}{input(<prompt text>)} function:
@@ -19,12 +42,6 @@
         \mytext{content/partials/basic_syntax/inline_if.out}
         Note that, however, \mintinline{python}{x = 1 if some_condition} is not valid; you need an
         \mintinline{python}{else} statement.
-
-    \subsection{Chaining Conditions}
-        Python enables you to chain conditions:
-
-        \mypy{content/partials/basic_syntax/chaining_conditions.py}
-        \mytext{content/partials/basic_syntax/chaining_conditions.out}
 
     \subsection{Comments}
         Single line comments start with a \#, docstrings ('multiline comments') comments start and
@@ -46,40 +63,48 @@
             \textbf{String Operations} \\
             \mypy{content/partials/basic_syntax/strings.py}
             \mytext{content/partials/basic_syntax/strings.out}
-            
+
         \end{indentblock}
 
         You can also use """ to create multiline strings
 
         \subsubsection{String Formatting}
-        Concatenating strings with numbers (e.g. \mintinline{python}{"Python" + 101}) results in an
-        error. \\
-        Gladly, there are some workarounds on how to format your strings:
+            Concatenating strings with numbers (e.g. \mintinline{python}{"Python" + 101}) results
+            in an error. \\
+            Gladly, there are some workarounds on how to format your strings:
 
-        \begin{indentblock}
+            \begin{indentblock}
 
-            \textbf{Making everything a string} \\
-            \mintinline{python}{"Python" + str(101)}
+                \textbf{Making everything a string} \\
+                \mintinline{python}{"Python" + str(101)}
 
-            \textbf{Modulo Operator} \\
-            \mintinline{python}{"Python %s" % (101)} \\
-            Calculating \texttt{string \% tuple} works because Python enables you to overwrite
-            operators. This has nothing to do with an actual modulo operation, it's just used for
-            simplicity. To learn more about operator overloading, take a look at
-            \fullref{Object Oriented Programming}
+                \textbf{Modulo Operator} \\
+                \mintinline{python}{"Python %s" % (101)} \\
+                Calculating \texttt{string \% tuple} works because Python enables you to overwrite
+                operators. This has nothing to do with an actual modulo operation, it's just used
+                for simplicity. To learn more about operator overloading, take a look at
+                \fullref{Object Oriented Programming}
 
-            \textbf{Format Method} \\
-            \mintinline{python}{"Python {}".format(101)}
+                \textbf{Format Method} \\
+                \mintinline{python}{"Python {}".format(101)}
 
-            \textbf{F-Strings} \\
-            \mintinline{python}{f"Python {101}"}
+                \textbf{F-Strings} \\
+                \mintinline{python}{f"Python {101}"}
 
-        \end{indentblock}
+            \end{indentblock}
 
-        Here are some examples:
+            Here are some examples:
 
-        \mypy{content/partials/basic_syntax/string_formatting_examples.py}
-        \mytext{content/partials/basic_syntax/string_formatting_examples.out}
+            \mypy{content/partials/basic_syntax/string_formatting_examples.py}
+            \mytext{content/partials/basic_syntax/string_formatting_examples.out}
+
+        \subsubsection{Raw String Literals}
+            Raw String Literals, often called Raw Strings, are Strings in which \textbackslash
+            is interpreted as the actual \textbackslash{} character.
+
+            \mypy{content/partials/basic_syntax/rstrings.py}
+            \mytext{content/partials/basic_syntax/rstrings.out}
+
 
     \subsection{Parse Numbers}
         You can parse numbers from strings using the
@@ -137,3 +162,10 @@
         If you want to raise (in other languages 'throw') an error, use the raise keyword:
         \mypy{content/partials/basic_syntax/raise_exception.py}
         \mytext{content/partials/basic_syntax/raise_exception.out}
+
+        There's also a finally clause which will always be exectued (unless you exit or kill
+        the program).
+        \mypy{content/partials/basic_syntax/finally.py}
+
+        In this example the \mintinline{Python}{with} context manager is probably a better option,
+        as he automatically closes opened files; see \fullref{Opening & Closing Files}

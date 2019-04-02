@@ -8,6 +8,7 @@ a multiline string
 print("Hello " * 3)
 print("Hello".upper())
 print("Hello".lower())
+print("Hello".count("l"))
 print(ord("A"))  # get unicode position
 
 for c in "Hello":  # iterate character by character
