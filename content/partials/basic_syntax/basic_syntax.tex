@@ -4,28 +4,12 @@
         \mypy{content/partials/basic_syntax/if_else_for_in.py}
         \mytext{content/partials/basic_syntax/if_else_for_in.out}
 
-    \subsection{Operators}
-        Python provides some special operators:
-
-        \mypy{content/partials/basic_syntax/operators.py}
-        \mytext{content/partials/basic_syntax/operators.out}
-
-        Note that there is no \mintinline{Python}{x++} in Python; you need to use
-        \mintinline{Python}{x += 1}.
-
     \subsection{Read From Command Line}
         You can read an input from the command line using the
         \mintinline{Python}{input(<prompt text>)} function:
 
         \mypy{content/partials/basic_syntax/read_cl.py}
         \mytext{content/partials/basic_syntax/read_cl.out}
-
-    \subsection{Parse Numbers}
-        You can parse numbers from strings using the
-        \mintinline{Python}{int()} and \mintinline{Python}{float()} methods:
-
-        \mypy{content/partials/basic_syntax/parse_numbers.py}
-        \mytext{content/partials/basic_syntax/parse_numbers.out}
 
     \subsection{Ternary Operator (Inline If/Else)}
         The ternary operators works like in other languages, however, you're not using special
@@ -42,16 +26,30 @@
         \mypy{content/partials/basic_syntax/chaining_conditions.py}
         \mytext{content/partials/basic_syntax/chaining_conditions.out}
 
-    \subsection{Strings And Comments}
+    \subsection{Comments}
         Single line comments start with a \#, docstrings ('multiline comments') comments start and
         end with """. \\
         However, you should use \# for 'normal' comments and """ for docstrings (e.g. explaining the
         purpose of a class or function).
 
-        You can also use """ to create multiline strings:
+        \mypy{content/partials/basic_syntax/comments.py}
 
-        \mypy{content/partials/basic_syntax/comments_multiline_strings.py}
-        \mytext{content/partials/basic_syntax/comments_multiline_strings.out}
+    \subsection{Strings}
+
+        \begin{indentblock}
+
+            \textbf{Creation} \\
+            You can create string using either single or double quotes;
+            it doesn't matter, which one you choose, just be consistent and
+            stick to to one style.
+
+            \textbf{String Operations} \\
+            \mypy{content/partials/basic_syntax/strings.py}
+            \mytext{content/partials/basic_syntax/strings.out}
+            
+        \end{indentblock}
+
+        You can also use """ to create multiline strings
 
         \subsubsection{String Formatting}
         Concatenating strings with numbers (e.g. \mintinline{python}{"Python" + 101}) results in an
@@ -78,11 +76,26 @@
 
         \end{indentblock}
 
-
         Here are some examples:
 
         \mypy{content/partials/basic_syntax/string_formatting_examples.py}
         \mytext{content/partials/basic_syntax/string_formatting_examples.out}
+
+    \subsection{Parse Numbers}
+        You can parse numbers from strings using the
+        \mintinline{Python}{int()} and \mintinline{Python}{float()} methods:
+
+        \mypy{content/partials/basic_syntax/parse_numbers.py}
+        \mytext{content/partials/basic_syntax/parse_numbers.out}
+
+    \subsection{Special Operators}
+        Python provides some special operators:
+
+        \mypy{content/partials/basic_syntax/operators.py}
+        \mytext{content/partials/basic_syntax/operators.out}
+
+        Note that there is no \mintinline{Python}{x++} in Python; you need to use
+        \mintinline{Python}{x += 1}.
 
     \subsection{'Main' In Python}
         You probably know the \textit{main()} method from other languages such as Java or C. \\

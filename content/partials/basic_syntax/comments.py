@@ -9,5 +9,3 @@ x = """
 You can create a
 multiline string using triple "
 """
-
-print(x)
