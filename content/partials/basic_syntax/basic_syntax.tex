@@ -11,7 +11,7 @@
             \mytext{content/partials/basic_syntax/chaining_conditions.out}
 
         \subsubsection{Ternary Operator (Inline If/Else)}
-            The ternary operators works like in other languages, however, you're not using special
+            The ternary operator works like in other languages, however, you're not using special
             characters like \textit{?} or \textit{:} but the keywords \textit{if} and \textit{else}
 
             \mypy{content/partials/basic_syntax/inline_if.py}
@@ -20,7 +20,7 @@
             \mintinline{python}{else} statement.
 
     \subsection{Read From Command Line}
-        You can read an input from the command line using the
+        You can get some input from the command line using the
         \mintinline{Python}{input(<prompt text>)} function:
 
         \mypy{content/partials/basic_syntax/read_cl.py}
@@ -49,16 +49,16 @@
         You can negate booleans using the \mintinline{Python}{not statement}:
         \mintinline{Python}{not False == True}
 
-        It also features collections like sets and dictionarys by default, see \fullref{Colletions}
+        It also features collections like sets and dictionaries by default, see \fullref{Colletions}
 
     \subsection{Strings}
 
         \begin{indentblock}
 
             \textbf{Creation} \\
-            You can create string using either single or double quotes;
+            You can create a string using either single or double quotes;
             it doesn't matter, which one you choose, just be consistent and
-            stick to to one style.
+            stick to one style.
 
             \textbf{String Operations} \\
             \mypy{content/partials/basic_syntax/strings.py}
@@ -146,15 +146,15 @@
         programming languages.
 
         Generally, we differentiate between two types of errors: syntax errors and exceptions \\
-        Syntax errors can - and must be - avoided, exception on the other hand can have different
+        Syntax errors can - and must be - avoided, exceptions, on the other hand, have different
         origins. \\
-        For example you might ask the user for a number - you get the user's input in form
+        For example, you might ask the user for a number - you get the user's input in the form
         of a string. You then try to parse the string - however, before trying to parse a number
         from it you don't know whether the user entered a valid number or not.
 
-        There's also a finally statement in Python which is used for clean-up actions like
-        closing files. It's always executed, even when an excpetion occured or you used a break,
-        continue or return statement.
+        There's also a \mintinline{Python}{finally} statement in Python which is used for clean-up
+        actions like closing files. It's always executed, even when an exception occurred or you
+        used a break, continue or return statement.
 
         \mypy{content/partials/basic_syntax/exception_handling.py}
         \mytext{content/partials/basic_syntax/exception_handling.out}
@@ -163,9 +163,9 @@
         \mypy{content/partials/basic_syntax/raise_exception.py}
         \mytext{content/partials/basic_syntax/raise_exception.out}
 
-        There's also a finally clause which will always be exectued (unless you exit or kill
+        There's also a finally clause which will always be executed (unless you exit or kill
         the program).
         \mypy{content/partials/basic_syntax/finally.py}
 
         In this example the \mintinline{Python}{with} context manager is probably a better option,
-        as he automatically closes opened files; see \fullref{Opening & Closing Files}
+        as he automatically closes opened files; see \fullref{Opening Closing Files}
