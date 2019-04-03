@@ -7,7 +7,7 @@ It's not an introductin to programming in general, so you should have some basic
 common principles.
 
 ## Download Latest Version
-Head over to [https://github.com/koenigscode/python-introduction/releases/latest] and download
+Head over to https://github.com/koenigscode/python-introduction/releases/latest and download
 the .pdf-file.
 
 ## Can I contribute to this Repository?
