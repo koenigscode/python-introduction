@@ -1,0 +1,26 @@
+\subsection{Set}
+    A set is an unordered (therefore unindexed) and  changeable collection without duplicate
+    items.
+
+    \begin{indentblock}
+
+        \textbf{Creation:} \mintinline{python}{s = set()} \sep{,}
+        \mintinline{python}{s = set(iterable)} \\
+        You \textbf{cannot} create a set using two empty curly braces \textit{\{ \}} as this would
+        create an empty dictionary.
+
+        \textbf{Add Item:} \mintinline{python}{s.add(item)} \\
+        If the element is already in the list, it won't be added again.
+
+        \textbf{Update (Extend) Set:} \mintinline{python}{s.update(iterable)} \\
+        Adds all elements from \textit{iterable} to the set.
+
+        \textbf{Remove Item:} \mintinline{python}{s.remove(item)} \\
+        Removes the item if it is present, otherwise raises KeyError.
+
+        \textbf{Discard Item:} \mintinline{python}{s.discard(item)} \\
+        Removes the element if it is present, otherwise does nothing.
+
+        \textbf{Membership Testing, Length, Clear:} see \fullref{List}
+
+    \end{indentblock}

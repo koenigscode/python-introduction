@@ -1,0 +1,39 @@
+\subsection{Tuple}
+
+    Tuples are collections that can, once created, not be changed, meaning you
+    cannot add or remove items.
+
+    \begin{indentblock}
+
+        \textbf{Creation:} \mintinline{Python}{t = ()} \sep{,} \mintinline{Python}{tuple()} \\
+        \mintinline{python}{t = item1, item2} \sep{,}
+        \mintinline{Python}{t = (item1, item2)} \sep{,}
+        \mintinline{Python}{t = tuple(iterable)} \\
+        You can create tuples containing any amount of items; as you cannot add elements to an
+        existing tuple, you will not need to create an empty one very often.
+
+        \textbf{Access Item, Index Of Item, Occurences Of Item, Membership Testing, Length:}
+        see \fullref{List}
+
+        Items cannot be added or removed; if an item within the tuple is mutable, however,
+        the item itself may be changed.
+
+    \end{indentblock}
+
+    As you can see, a tuple's functionality is quite limited compared to lists. \\
+    So why would you use them? Well, for once they are faster than lists and
+    \textbf{they enable to you to "return multiple values from a function" thanks to unpacking}:
+
+    \subsubsection{Tuple Unpacking}
+
+        If you got a tuple consiting of \textit{n} elements, you can \textbf{unpack} it and save
+        its individual items in \textit{n} (\textit{\textbf{exactly} n}) variables.
+
+        \mypy{content/partials/collections/tuple_unpacking.py}
+        \mytext{content/partials/collections/tuple_unpacking.out}
+
+        If you try to unpack a tuple with \textit{n} to less or more than \textit{n} variables,
+        an error will be raised. Items not needed are often saved to a dummy variable \texttt{\_}.
+
+        \mypy{content/partials/collections/tuple_error.py}
+        \mytext{content/partials/collections/tuple_error.out}

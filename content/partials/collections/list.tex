@@ -1,0 +1,77 @@
+\subsection{List} \label{List}
+    A list is an ordered collection, allows duplicate members and is changeable.
+
+    \begin{indentblock}
+
+        \textbf{Creation:} \mintinline{python}{l = []} \sep{,} \mintinline{python}{l = [1,2,3]}
+        \sep{,} \mintinline{python}{l = list()} \sep{,} \mintinline{python}{l = list(iterable)}
+
+        You can create a new list using either two square brackets or the list constructor.
+        If you want to create a list from an iterable, you need to use the
+        \mintinline{python}{list()} constructor:
+
+        \mypy{content/partials/collections/list_example.py}
+        \mytext{content/partials/collections/list_example.out}
+
+        \textbf{Append Item:} \mintinline{python}{l.append(item)}
+
+        \textbf{Set Item At Index:} \mintinline{Python}{l[index] = item}
+
+        \textbf{Insert Item At Index:} \mintinline{python}{l.insert(index, item)}
+
+        \textbf{Extend List:} \mintinline{python}{l.extend(iterable)} \\
+        \mintinline{python}{l.append([1,2,3])} would add a list containing three items to our list.
+        So when we want the items of an iterable (e.g. list) to be added item for item to our list,
+        we can extend our list with that iterable.
+
+        \mypy{content/partials/collections/extend_example.py}
+        \mytext{content/partials/collections/extend_example.out}
+
+        \textbf{Access Item:} \mintinline{python}{item = l[index]} \sep{,}
+        see \fullref{List Slicing} for advanced syntax
+
+        \textbf{List Length:} \mintinline{Python}{len(l)}
+
+        \textbf{Occurences Of Item:} \mintinline{Python}{l.count(item)}
+
+        \textbf{Index Of Item:} \mintinline{Python}{l.index(item)}
+
+        \textbf{Change Item Value:} \mintinline{python}{l[3] = "new value"}
+
+        \textbf{Remove Item By Value:} \mintinline{python}{l.remove(item)} \\
+        Removes the item if it is present, otherwise raises KeyError.
+
+        \textbf{Remove Item By Index:}
+        \begin{itemize}
+            \bitem{Pop:} \mintinline{Python}{l.pop()} \sep{,}
+            \mintinline{Python}{l.pop(index)} \\
+            Removes the item at the specified position; if no index is given, it removes the last
+            item in the list. Returns the removed value.
+            \bitem{Delete Statement:} \mintinline{Python}{del l[index]} \\
+            When using the \mintinline{Python}{del} statement the removed value will not be
+            returned.
+        \end{itemize}
+
+
+        \textbf{Membership Testing:} \mintinline{python}{item in l} \sep{,}
+        \mintinline{python}{item not in l}
+
+        \textbf{Reverse List:} \mintinline{Python}{l.reverse()}
+
+        \textbf{Sort List (In Place):} \mintinline{Python}{l.sort()} \sep{,}
+        \mintinline{Python}{l.sort(key=<comparison function>, reverse=<boolean>)} \\
+        Sorts the list in place (i.e. changes the original list instead of returning a new one)\\
+        \textit{key} is an optional function used to compare the elements to each other.
+
+        \textbf{Sort List (As Copy):} \mintinline{Python}{l = sorted(iterable)} \sep{,} \\
+        \mintinline{Python}{sorted(iterable, key=<comparison function>, reverse=<boolean>)} \\
+        Returns a new, sorted list. Keeps the original iterable unchanged.
+
+        \textbf{Clear List:} \mintinline{python}{l.clear()}
+        \\ \\
+        Using the \mintinline{Python}{l.append()} and \mintinline{Python}{l.pop()} methods, lists
+        can be used as stacks
+
+    \end{indentblock}
+
+    \subsubsection{List Slicing} \label{List Slicing}
