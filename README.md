@@ -3,11 +3,11 @@
 Hey!
 The aim of this PDF is to quickstart your journey into Python.
 
-It's not an introductin to programming in general, so you should have some basic understanding of
+It's not an introduction to programming in general, so you should have some basic understanding of
 common principles.
 
 ## Download Latest Version
-Head over to https://github.com/koenigscode/python-introduction/releases/latest and download
+Head over to https://github.com/koenigscode/python-introduction/releases/latest/download/python-introduction.pdf
 the .pdf-file.
 
 ## Can I contribute to this Repository?
